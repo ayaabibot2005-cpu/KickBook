@@ -1,35 +1,12 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #0a0a0a;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-}
+function addPlayer() {
+  const name = prompt("Enter player name:");
+  if (!name) return;
 
-h1 {
-  color: #00c853;
-}
+  const container = document.getElementById("players");
 
-button {
-  background: #00c853;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  margin: 10px;
-}
+  const card = document.createElement("div");
+  card.className = "card";
+  card.textContent = name;
 
-#players {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.card {
-  background: #1a1a1a;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 18px;
+  container.appendChild(card);
 }
