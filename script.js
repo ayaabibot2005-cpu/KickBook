@@ -1,10 +1,35 @@
-function addPlayer() {
-  const name = prompt("Enter player name:");
-  if (!name) return;
+body {
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 
-  const div = document.createElement("div");
-  div.className = "card";
-  div.innerHTML = "<h3>" + name + "</h3>";
+h1 {
+  color: #00c853;
+}
 
-  document.getElementById("players").appendChild(div);
+button {
+  background: #00c853;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+}
+
+#players {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
 }
