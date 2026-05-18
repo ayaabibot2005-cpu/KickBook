@@ -1,7 +1,12 @@
-console.log("JS WORKS");
-
 function addPlayer() {
-  console.log("CLICK WORKS");
+  const name = prompt("Enter player name:");
+  if (!name) return;
 
-  document.body.innerHTML += "<div style='color:white;padding:10px'>TEST PLAYER</div>";
+  const container = document.getElementById("players");
+
+  const card = document.createElement("div");
+  card.className = "card";
+  card.textContent = name;
+
+  container.appendChild(card);
 }
